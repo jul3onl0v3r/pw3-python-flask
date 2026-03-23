@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main>
+    <h1>Consoles em destaque</h1>
+    <hr>
+    <li>Consoles: {{ consoles }}</li>
+    <li>Data de lançamento: {{ lancamento }}</li>
+
+            <h3>TOP Consoles e suas datas de Lançamento</h3>
+            <ol>
+                {% for console in consoles %}
+                    <li>{{ console }}</li>
+                {% endfor %}
+            </ol>
+
+    <p>O console {{ consoles }} tem {{ 2026 - lancamento }} anos</p>
+    <a href="/">Voltar</a>
+</main>
+
+{% endblock content %}

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main>
+    <h1>Jogos em destaque</h1>
+    <hr>
+        <li>Título: {{ titulo }}</li>
+        <li>Ano: {{ ano }}</li>
+        <li>Categoria: {{ categoria }}</li>
+        <!-- FOR PARA EXIBIR LISTA -->
+
+            <h3>TOP Players - Ranking</h3>
+            <ol>
+                <!---->
+                {% for jogador in jogadores %}
+                    <li>{{ jogador }}</li>
+                {% endfor %}
+            </ol>
+            <p>O jogo {{ titulo }} tem {{ 2026 - ano }} anos</p>
+
+            <hr>
+            <h3>Jogo do Ano:</h3>
+            <!--FOR PARA EXIBIR OBJETO (DICIONÁRIO)-->
+            {% for chave, valor in game.items()%}
+            <details>
+                <summary>{{ chave }}</summary>
+                <p>{{ valor }}</p>
+            </details>
+            {% endfor %}
+
+
+
+    <a href="/">Voltar</a>
+
+</main>
+{% endblock content %}
