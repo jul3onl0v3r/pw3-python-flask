@@ -19,7 +19,7 @@ def games():
 
     #criando variáveis para passar as informações de um jogo
     titulo = "Resident Evil Requiem"
-    ano = 2026
+    ano = "2026"
     categoria = "Survival Horror"
     jogadores = ['BKSEdu', 'Alanzoka', 'Maxmrm', 'Chris']
     return render_template('games.html', 
